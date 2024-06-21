@@ -1,12 +1,22 @@
-﻿<Window x:Class="net_prog.MainWindow"
+﻿<Window x:Class="CurrencyClient.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:net_prog"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Currency Client" Height="400" Width="525">
     <Grid>
+        <Label Content="Ім'я користувача:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Username" HorizontalAlignment="Left" Margin="150,10,0,0" VerticalAlignment="Top" Width="120"/>
 
+        <Label Content="Пароль:" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="Password" HorizontalAlignment="Left" Margin="150,50,0,0" VerticalAlignment="Top" Width="120"/>
+
+        <Label Content="Валюта від:" HorizontalAlignment="Left" Margin="10,100,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="CurrencyFrom" HorizontalAlignment="Left" Margin="150,100,0,0" VerticalAlignment="Top" Width="120"/>
+
+        <Label Content="Валюта до:" HorizontalAlignment="Left" Margin="10,150,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="CurrencyTo" HorizontalAlignment="Left" Margin="150,150,0,0" VerticalAlignment="Top" Width="120"/>
+
+        <Button Content="Отримати курс" HorizontalAlignment="Left" Margin="10,200,0,0" VerticalAlignment="Top" Width="100" Click="GetRateButton_Click"/>
+
+        <TextBlock x:Name="ResultTextBlock" HorizontalAlignment="Left" Margin="10,250,0,0" VerticalAlignment="Top" Width="480" TextWrapping="Wrap"/>
     </Grid>
 </Window>
